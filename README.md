@@ -1,5 +1,5 @@
 # How it works
-The router gets the first parameter of the url as the controller, the second as the method and the others as the method parameters.
+The router gets the first parameter of the url as the controller, the second as the method and the others as the method arguments.
 When the user search for a page, the router checks if its controller (and any method) exist, otherwise the pagenotfound controller is called
 
 # Basic setup
