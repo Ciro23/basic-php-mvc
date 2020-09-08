@@ -7,9 +7,6 @@ require_once __DIR__ . "/../vendor/autoload.php";
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
 $dotenv->load();
 
-spl_autoload_register(function($className) {
-    include __DIR__ . "/../app/core/$className.php";
-});
-
+// runs the app
 $router = new Router;
 $router->route();
