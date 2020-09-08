@@ -8,11 +8,11 @@ class Dbh {
     private $charset;
     
     protected function connect() {
-        $this->dbServerName = "localhost";
-        $this->dbUsername = "root";
-        $this->dbPassword = "";
-        $this->dbName = "mvc";
-        $this->charset = "utf8mb4";
+        $this->dbServerName = $_ENV['dbServerName'];
+        $this->dbUsername = $_ENV['dbUsername'];
+        $this->dbPassword = $_ENV['dbPassword'];
+        $this->dbName = $_ENV['dbName'];
+        $this->charset = $_ENV['charset'];
 
         $dsn = "mysql:host=" . $this->dbServerName  . ";dbname=" . $this->dbName . ";charset=" . $this->charset;
         $dbh = new PDO($dsn, $this->dbUsername, $this->dbPassword);
