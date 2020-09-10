@@ -8,11 +8,7 @@ class Router {
     protected $args = [];
 
     public function parseUrl() {
-        if (isset($_GET['url'])) {
-            // removes the last /, sanitizes the url and explodes the /
-            return explode("/", filter_var(rtrim($_GET['url'], "/"), FILTER_SANITIZE_URL));
-        }
-        return [];
+        return explode("/", filter_var(trim($_SERVER['REQUEST_URI'], "/"), FILTER_SANITIZE_URL));
     }
 
     public function arrayToLower($array) {
@@ -27,7 +23,7 @@ class Router {
         $url = $this->arrayToLower($url);
         
         // checks if a controller with the same name of the first element exists
-        if (isset($url[0])) {
+        if (isset($url[0]) && $url[0] != "") {
             if (file_exists(__DIR__ . "/../controllers/" . $url[0] . ".controller.php") && $url[0] != "home") {
                 $this->controller = $url[0];
             } else {
