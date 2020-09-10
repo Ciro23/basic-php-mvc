@@ -3,7 +3,6 @@
     "type": "library",
     "description": "a basic php mvc framework",
     "license": "MIT",
-    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Ciro Sorre",
