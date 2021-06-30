@@ -1,5 +1,5 @@
 # What is this
-this was the very first php oop project i've ever made. it helped me understanding the very basic concepts of the mvc pattern.
+this was the very first php oop project i've ever made. it helped me understanding the very basic concepts of the mvc pattern.<br>
 i updated this "framework" and it became [this](https://github.com/Ciro23/mvc-framework) (which actually still sucks)
 
 # How it works
